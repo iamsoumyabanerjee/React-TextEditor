@@ -1,0 +1,15 @@
+.textarea-container {
+  text-align: center;
+  margin: auto;
+  max-width: 800px;
+  .text-area {
+    height: 300px;
+    margin-top: 24px;
+    font-size: 14px;
+    resize: none;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 16px;
+  }
+}

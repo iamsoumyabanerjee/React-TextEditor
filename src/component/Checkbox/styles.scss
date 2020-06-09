@@ -1,0 +1,64 @@
+@import '../../styles/variables.scss';
+
+.checkbox {
+  position: relative;
+  margin-bottom: 10px;
+
+  input {
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+    position: absolute;
+    left: -9999px;
+  }
+  [type="checkbox"]:checked + label, [type="checkbox"]:not(:checked) + label {
+    position: relative;
+    padding-left: 34px;
+    cursor: pointer;
+    line-height: 28px;
+    display: inline-block;  
+
+    &:before {
+      border-radius: 4px;
+      background: $white;
+      border: 2px solid #dadada;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      margin-right: .75rem;
+    }
+  }
+  [type="checkbox"]:checked + label {
+    &:after {
+      background-color: #323232;
+      opacity: 1;
+      content: '';
+      background: #4a4a4a;
+      position: absolute;
+      top: 13px;
+      left: 8px;
+
+      background: $charcoal;
+      width: 2px;
+      height: 2px;
+      box-shadow: 
+        2px 0 0 $charcoal,
+        4px 0 0 $charcoal,
+        4px -2px 0 $charcoal,
+        4px -4px 0 $charcoal,
+        4px -6px 0 $charcoal,
+        4px -8px 0 $charcoal;
+      transform: rotate(45deg);
+
+    }
+  }
+  
+}

@@ -1,0 +1,33 @@
+@import '../../styles/variables.scss';
+
+.edit-control-headers {
+  box-shadow: 0 0 5px $grey;
+  display: flex;
+  justify-content: end;
+  
+  .control-header {
+    background-color: $white;
+    border-top: 1px solid $grey;
+    border-right: 1px solid $grey;
+    display: block;
+    font-weight: bold;
+    padding: 10px 8px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+
+    &.active {
+      background-color: $light-green;
+    }
+
+    &:first-child {
+      border-left: 1px solid $grey;
+      border-radius: 4px 0 0 4px;
+    }
+
+    &:last-child {
+      border-right: 1px solid $grey;
+      border-radius: 0 4px 4px 0;
+    }
+  }
+}
